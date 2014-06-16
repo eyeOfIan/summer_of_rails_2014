@@ -17,7 +17,7 @@ persons = {}
 input = ""
 
 
-
+# FIXME: It's bad form to do  == true in any programming language. true is true. So   while keep_going   is all you need.
 while keep_going == true 
 	
 #puts "Please enter your first name."
@@ -30,6 +30,7 @@ while keep_going == true
  
 #persons = {"name" => first_name , "last name" => last_name ,"age" => age}
 
+# FIXME: all of this should be indented two spaces since it's within the WHILE.  Your previous programming instructors should have made indentation a priority.
 puts "Please enter your first name, last name, and age."
 input = gets.chop
 (first_name,last_name,age) = input.split (",")
@@ -38,6 +39,9 @@ persons [input] = persons
 puts "Would you like to enter another name? Y/N"
 again = gets.chop
 
+# FIXME: your branches are indented too far. Ruby standard indentation is two spaces at each level.
+# FIXME it would be easier to assign keep_going using a boolean expression:
+# keep_going = (again == "Y" || again == "y" || again = "yes") 
 if again == "Y"
 	keep_going = true
 else 
